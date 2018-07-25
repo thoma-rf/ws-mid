@@ -5,4 +5,4 @@ to setup: npm install
 
 to run:  npm test
 
-NB: yes, it is messy
+PS: yes, it is messy
