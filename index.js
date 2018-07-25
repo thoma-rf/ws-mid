@@ -27,8 +27,6 @@ http.createServer(function (request, res) {
       });
 
       request.on('end', function () {
-        // var post = qs.parse(body);
-        // use post['blah'], etc.
         console.dir(JSON.parse(body));
         execCharge(body, res, function(dataku){
           res.writeHead(200, { 'Content-Type': 'application/json' });
@@ -42,7 +40,7 @@ http.createServer(function (request, res) {
   }else{
 
     res.writeHead(200, { 'Content-Type': 'application/json' });
-    res.write('{ "aha": "Hello World!","location":"'+request.url+'" }');
+    res.write('{ "output": "not POST","location":"'+request.url+'" }');
     // res.write('{ "aha": "Hello World!" }');
     //  == '/charge'
     res.end();
@@ -56,7 +54,7 @@ function execCharge(bodyku, res, callme) {
 
   var request = require('request');
 
-  var server_key = Buffer.from('SB-Mid-server-MTd20cl1WzZcEnQjRenBegr4:').toString('base64')
+  var server_key = Buffer.from('_your_server_key_').toString('base64')
 
   // Set the headers
   var headers = {
