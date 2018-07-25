@@ -1,0 +1,17 @@
+{
+  "name": "ws-mid",
+  "version": "1.0.0",
+  "description": "curl to lcoal ws",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "keywords": [
+    "ok"
+  ],
+  "author": "thoma",
+  "license": "ISC",
+  "dependencies": {
+    "request": "^1.0.0"
+  }
+}
